@@ -80,7 +80,7 @@ for ticker, strike in zip(tickers, strikes):
     perf = last_price / strike
     ko_price = strike * ko_pct
     ki_price = strike * ki_pct
-    dist_to_ki = ((last_price - ki_price) / strike) * 100
+    dist_to_ki = ((ki_price - last_price) / strike) * 100
     dist_to_ko = ((ko_price - last_price) / strike) * 100
 
     status_data.append({
